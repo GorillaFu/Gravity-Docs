@@ -56,7 +56,8 @@ seeds = "2b089bfb4c7366efb402b48376a7209632380c9c@65.19.136.133:26656,63e662f5e0
 
 ### Add your validator key
 
-We need to import the validator key. This is the key containing Graviton tokens
+We need to import the validator key. This is the key containing Graviton tokens. 
+Make up and save a secure seed phrase. It will be used again later.
 
 ```bash
 gravity keys add <my validator key name> --recover <your seed phrase>
@@ -70,7 +71,7 @@ gravity keys add <my validator key name> --ledger
 
 ### Generate your Delegate keys
 
-There are three keys involved in this process.
+There are four keys involved in this process.
 
 ```text
 Validator Funds key: This is the key you submitted for genesis it starts with `gravity1` and contains your funds
@@ -88,8 +89,11 @@ Together we may refer to the Gravity Orchestrator Cosmos Key and Gravity Orchest
 If you lose your Gravity delegate keys you will have to unbond and create a new validator because it's not possible to rotate them. So store all output of the following commands in a safe place.
 
 ```bash
+#this will generate a key. save it for later use
 gravity eth_keys add
+#choose a string for your key name
 gravity keys add <Your Gravity Orchestrator Cosmos Key Name>
+#you will be prompted for a password. This will be the seed phrase set earlier.
 ```
 
 Once we have registered our keys we will also set them in our Orchestrator right away, this reduces the risk of confusion as the chain starts and you need these keys to submit Gravity bridge signatures via your orchestrator.
