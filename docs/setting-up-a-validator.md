@@ -73,7 +73,7 @@ gravity keys add <my validator key name> --ledger
 
 There are four keys involved in this process.
 
-```text
+```list
 Validator Funds key: This is the key you submitted for genesis it starts with `gravity1` and contains your funds
 
 Validator Operator Key: This is a key that will be generated with your gentx, it starts with `gravityvaloper1` and actually signs your validators blocks
@@ -93,7 +93,7 @@ If you lose your Gravity delegate keys you will have to unbond and create a new 
 gravity eth_keys add
 #choose a string for your key name
 gravity keys add <Your Gravity Orchestrator Cosmos Key Name>
-#you will be prompted for a password. This will be the seed phrase set earlier.
+#you will be prompted for a passphrase. This will be the seed phrase set earlier.
 ```
 
 Once we have registered our keys we will also set them in our Orchestrator right away, this reduces the risk of confusion as the chain starts and you need these keys to submit Gravity bridge signatures via your orchestrator.
